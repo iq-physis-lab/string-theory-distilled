@@ -1,0 +1,175 @@
+# =============================================================================
+# String Theory Distilled — .gitignore  (Physis L5)
+# =============================================================================
+
+# ── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+
+# Distribution / Packaging
+.Python
+build/
+dist/
+eggs/
+.eggs/
+*.egg-info/
+*.egg
+MANIFEST
+sdist/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ── Jupyter Notebook ─────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+profile_default/
+ipython_config.py
+
+# ── NumPy / SciPy / SymPy cache ──────────────────────────────────────────────
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.joblib
+
+# ── 끈이론 시연 산출물 ───────────────────────────────────────────────────────
+# 끈 모드 스펙트럼, T-쌍대성 불변, 류–타카야나기, 풍경 세기의 직렬화 결과
+spectrum_runs/
+duality_runs/
+holography_runs/
+landscape_sweeps/
+microstate_counts/
+*.spectrum
+
+# ── Experiment outputs ───────────────────────────────────────────────────────
+# 생성된 그림 (각 챕터)
+# Ch1: 끈 진동 스펙트럼 사다리 · 중력자 모드
+# Ch2: 임계 차원 중심전하 · 콤팩트화 모듈라이
+# Ch3: T-쌍대성 스펙트럼 불변 · 쌍대성 망
+# Ch4: D-브레인 구성 · 블랙홀 미시상태 계수
+# Ch5: AdS/CFT 사전 Δ(Δ−d)=m² · 류–타카야나기 S_A=(c/3)ln(ℓ/ε)
+# Ch6: 풍경 10⁵⁰⁰ 세기 · 성취/미배달 분류표
+# Ch7: 종합 코드 (스펙트럼·쌍대성·RT·사전·세기)
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+*.gif
+*.mp4
+
+# 결과 / 로그
+results/
+outputs/
+logs/
+runs/
+*.log
+*.csv
+*.tsv
+
+# ── Parameter sweeps ─────────────────────────────────────────────────────────
+# 반지름 R sweep · 결합 g sweep · 콤팩트화 모듈라이 sweep
+sweeps/
+moduli_studies/
+*.db
+*.sqlite
+*.sqlite3
+
+# ── 대규모 시뮬레이션 cache ──────────────────────────────────────────────────
+sim_cache/
+monte_carlo_cache/
+batch_results/
+
+# ── IDE / Editor ─────────────────────────────────────────────────────────────
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.code-workspace
+*.swp
+*.swo
+*~
+\#*\#
+.\#*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+.directory
+
+# ── Documentation build ──────────────────────────────────────────────────────
+docs/_build/
+docs/generated/
+site/
+.mkdocs_cache/
+
+# ── LaTeX / 수식 PDF 빌드 ────────────────────────────────────────────────────
+# 일부 문서가 .tex 로 유도·증명 수식 export 하는 경우 대비
+*.aux
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.toc
+*.out
+*.bbl
+*.blg
+*.dvi
+*.lof
+*.lot
+
+# ── Secrets / Credentials ────────────────────────────────────────────────────
+.env.local
+.env.*.local
+secrets.py
+credentials.json
+*.pem
+*.key
+
+# ── Test / lint cache ────────────────────────────────────────────────────────
+.hypothesis/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+
+# data/ 디렉토리 (참조 데이터 보존)
+data/
+datasets/
+raw/
+processed/
+!data/.gitkeep
